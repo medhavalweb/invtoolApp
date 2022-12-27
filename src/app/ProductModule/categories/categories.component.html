@@ -1,0 +1,66 @@
+<div class="container ">
+  <div class="card shadow mt-md-3 bg-info">
+    <div class="row p-2 ">
+      <div class="col-md-3">
+        <h4 class=" p-3">Category Data</h4>
+        <div class="d-flex" role="search">
+          <input type="text" class="form-control" [(ngModel)]="searchText" (keyup.enter)="searchKey()" type="search"
+            name="search" id="search" aria-label="Search" placeholder="Search" ngModel>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card shadow mt-md-3">
+    <div class="row justify-content-between">
+      <div class="col-md-5 m-md-4 ">
+        <table class="table  table-hover " cellspacing="0" width="100%">
+          <thead>
+            <tr>
+              <th scope="col">Category ID</th>
+              <th scope="col">Category Name </th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let data of categoriesData | paginate: { itemsPerPage: count, currentPage: p } ">
+              <td>{{data.id}}</td>
+              <td>{{data.catName}}</td>
+              <td>
+                <button (click)="onEditCategories(data)" class="btn btn-sm btn-secondary"><i class="fa fa-pencil mx-1"
+                    aria-hidden="true"></i>Edit</button>
+                <button (click)="deleteCategories(data)" class="btn btn-sm btn-danger mx-2"><i class="fa fa-trash mx-1"
+                    aria-hidden="true"></i>
+                  Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- paginatin -->
+        <div class="text-right">
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+
+
+      </div>
+      <div class="col-md-5">
+        <form [formGroup]="categoriesForm">
+          <h5 class="modal-title mt-3 ">Add Categories Name</h5>
+          <div class="mb-md-2 mt-md-3 col-md-8 text-left">
+            <input type="text" class="form-control" placeholder="Category Name here" formControlName="catName">
+            <small
+              *ngIf="categoriesForm.controls['catName'].invalid && (categoriesForm.controls['catName'].dirty || categoriesForm.controls['catName'].touched)"
+              class="form-text text-danger w-100">please enter valid Category !</small>
+
+          </div>
+        </form>
+        <div class="mt-md-3 mb-md-3">
+          <button type="button" *ngIf="btnSaveShow" class=" btn btn-secondary" (click)="onSubmitCategories()"><i
+              class="fa fa-telegram mx-1" aria-hidden="true"></i>Submit
+            Category</button>
+          <button type="button" *ngIf="btnupdateShow" (click)="updateCategories()" class="btn btn-secondary">Update
+            Category</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

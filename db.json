@@ -1,0 +1,100 @@
+{
+  "categories": [
+    {
+      "catName": "test1",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "catName": "test2"
+    },
+    {
+      "id": 3,
+      "catName": "test3"
+    },
+    {
+      "id": 4,
+      "catName": "test4"
+    },
+    {
+      "id": 5,
+      "catName": "test5"
+    },
+    {
+      "id": 6,
+      "catName": "test6"
+    },
+    {
+      "id": 7,
+      "catName": "test7"
+    },
+    {
+      "id": 8,
+      "catName": "test8"
+    },
+    {
+      "id": 9,
+      "catName": "test9"
+    },
+    {
+      "id": 10,
+      "catName": "test22"
+    },
+    {
+      "id": 11,
+      "catName": "test11"
+    },
+    {
+      "id": 12,
+      "catName": "test12"
+    },
+    {
+      "id": 13,
+      "catName": "test13"
+    }
+  ],
+  "products": [
+    {
+      "productCode": "test1code",
+      "productName": "test1Name",
+      "categories": "test1",
+      "pro_price": 111234,
+      "id": 1
+    },
+    {
+      "productCode": "test2code",
+      "productName": "test2Name",
+      "categories": "test2",
+      "pro_price": 222,
+      "id": 2
+    },
+    {
+      "productName": "test3name",
+      "productCode": "test3code",
+      "categories": "test3",
+      "pro_price": 333,
+      "id": 3
+    },
+    {
+      "productCode": "test4code",
+      "productName": "test4name",
+      "categories": "test4",
+      "pro_price": 4444,
+      "id": 4
+    },
+    {
+      "productName": "test5name",
+      "productCode": "test5code",
+      "categories": "test5",
+      "pro_price": 555,
+      "id": 5
+    },
+    {
+      "productName": "testingname",
+      "productCode": "test",
+      "categories": "test5",
+      "pro_price": 333,
+      "id": 6
+    }
+  ]
+}
